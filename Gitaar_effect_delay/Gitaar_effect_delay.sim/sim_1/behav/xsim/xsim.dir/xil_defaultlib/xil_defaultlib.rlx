@@ -1,0 +1,11 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.gen/sources_1/bd/Fifo/hdl/Fifo_wrapper.vhd,1672672772,vhdl,,,,fifo_wrapper,,,,,,,,
+C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_fifo_generator_0_0/sim/Fifo_fifo_generator_0_0.v,1672671436,verilog,,C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_fifo_generator_0_1/sim/Fifo_fifo_generator_0_1.v,,Fifo_fifo_generator_0_0,,,../../../../Gitaar_effect_delay.gen/sources_1/bd/clk/ipshared/4e49,,,,,
+C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_fifo_generator_0_1/sim/Fifo_fifo_generator_0_1.v,1672671437,verilog,,C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_xlconstant_0_0/sim/Fifo_xlconstant_0_0.v,,Fifo_fifo_generator_0_1,,,../../../../Gitaar_effect_delay.gen/sources_1/bd/clk/ipshared/4e49,,,,,
+C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_reset_inv_0_0/sim/Fifo_reset_inv_0_0.v,1672672772,verilog,,,,Fifo_reset_inv_0_0,,,../../../../Gitaar_effect_delay.gen/sources_1/bd/clk/ipshared/4e49,,,,,
+C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_xlconstant_0_0/sim/Fifo_xlconstant_0_0.v,1672671437,verilog,,C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_reset_inv_0_0/sim/Fifo_reset_inv_0_0.v,,Fifo_xlconstant_0_0,,,../../../../Gitaar_effect_delay.gen/sources_1/bd/clk/ipshared/4e49,,,,,
+C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/sim/Fifo.vhd,1672672772,vhdl,,,,fifo,,,,,,,,
+C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,

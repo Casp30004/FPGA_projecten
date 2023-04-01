@@ -1,0 +1,41 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.09006",
+   "Default View_TopLeft":"-325,-109",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -90 -y 180 -defaultsOSRD
+preplace port port-id_ws_in -pg 1 -lvl 0 -x -90 -y 60 -defaultsOSRD
+preplace portBus audio_in_left -pg 1 -lvl 0 -x -90 -y 20 -defaultsOSRD
+preplace portBus delay_0_0 -pg 1 -lvl 5 -x 2540 -y 320 -defaultsOSRD
+preplace portBus audio_in_right -pg 1 -lvl 0 -x -90 -y 80 -defaultsOSRD
+preplace portBus lfo_speed -pg 1 -lvl 0 -x -90 -y 140 -defaultsOSRD
+preplace portBus max_delay -pg 1 -lvl 0 -x -90 -y 120 -defaultsOSRD
+preplace portBus min_delay -pg 1 -lvl 0 -x -90 -y 160 -defaultsOSRD
+preplace portBus feedback_chorus -pg 1 -lvl 0 -x -90 -y 100 -defaultsOSRD
+preplace portBus mix_chorus -pg 1 -lvl 0 -x -90 -y 250 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 150 -y 130 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 1 -x 150 -y -20 -defaultsOSRD
+preplace inst chorus_channel_0 -pg 1 -lvl 2 -x 800 -y 120 -defaultsOSRD
+preplace inst Delay_mix_0 -pg 1 -lvl 4 -x 1680 -y 210 -defaultsOSRD
+preplace inst chorus_channel_1 -pg 1 -lvl 2 -x 800 -y 420 -defaultsOSRD
+preplace netloc Delay_mix_0_audio_out_l 1 4 1 1860 200n
+preplace netloc aclk_1 1 0 2 0J 190 310
+preplace netloc aclk_2 1 1 1 350 100n
+preplace netloc audio_in_0_0_1 1 0 4 -70J -90 370 0 NJ 0 1070
+preplace netloc audio_in_0_0_2 1 0 4 -60J -80 360 260 NJ 260 1070
+preplace netloc chorus_channel_0_delay_0 1 2 2 NJ 120 1060
+preplace netloc chorus_channel_1_delay_0 1 2 2 NJ 420 1080
+preplace netloc lfo_speed_0_0_1 1 0 2 -20J 60 320
+preplace netloc max_delay_0_0_1 1 0 2 -40J 50 330
+preplace netloc min_delay_0_0_1 1 0 2 -10J 70 300
+preplace netloc mix_0_0_1 1 0 2 -50J 40 340
+preplace netloc mix_0_1 1 0 4 NJ 250 NJ 250 NJ 250 N
+preplace netloc ws_in_0_1 1 1 1 350 -20n
+preplace netloc ws_in_1 1 0 2 -30J 380 NJ
+levelinfo -pg 1 -90 150 800 1040 1680 2540
+pagesize -pg 1 -db -bbox -sgen -290 -110 2700 700
+"
+}
+0

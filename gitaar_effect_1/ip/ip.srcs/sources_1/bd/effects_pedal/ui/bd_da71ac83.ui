@@ -1,0 +1,61 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.855446",
+   "Default View_TopLeft":"-277,0",
+   "ExpandedHierarchyInLayout":"/chorus/chorus_channel_0",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -270 -y 220 -defaultsOSRD
+preplace port port-id_ws_in -pg 1 -lvl 0 -x -270 -y 730 -defaultsOSRD
+preplace port port-id_switch -pg 1 -lvl 0 -x -270 -y 250 -defaultsOSRD
+preplace portBus audio_in_left -pg 1 -lvl 0 -x -270 -y 60 -defaultsOSRD
+preplace portBus audio_in_right -pg 1 -lvl 0 -x -270 -y 170 -defaultsOSRD
+preplace portBus audio_out_L -pg 1 -lvl 3 -x 1770 -y 90 -defaultsOSRD
+preplace portBus feedback_chorus -pg 1 -lvl 0 -x -270 -y 150 -defaultsOSRD
+preplace portBus mix_chorus -pg 1 -lvl 0 -x -270 -y 290 -defaultsOSRD
+preplace portBus audio_out_R -pg 1 -lvl 3 -x 1770 -y 110 -defaultsOSRD
+preplace portBus lfo_speed -pg 1 -lvl 0 -x -270 -y 620 -defaultsOSRD
+preplace portBus max_delay -pg 1 -lvl 0 -x -270 -y 600 -defaultsOSRD
+preplace portBus min_delay -pg 1 -lvl 0 -x -270 -y 570 -defaultsOSRD
+preplace inst Delay_mix_0 -pg 1 -lvl 1 -x 690 -y 250 -defaultsOSRD
+preplace inst chorus_channel_0 -pg 1 -lvl 1 -x 690 -y 470 -defaultsOSRD
+preplace inst chorus_channel_1 -pg 1 -lvl 1 -x 690 -y 1020 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 690 -y 754 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 1 -x 690 -y 860 -defaultsOSRD
+preplace inst effect_on_off_0 -pg 1 -lvl 2 -x 1575 -y 100 -defaultsOSRD
+preplace inst chorus_channel_0|delay -pg 1 -lvl 2 -x 1060 -y 480 -defaultsOSRD
+preplace inst chorus_channel_0|chorus_LFO_0 -pg 1 -lvl 1 -x 760 -y 590 -defaultsOSRD
+preplace netloc Delay_mix_0_audio_out_l 1 1 1 1370 100n
+preplace netloc Delay_mix_0_audio_out_r 1 1 1 1380 120n
+preplace netloc aclk_1 1 0 1 -220 220n
+preplace netloc aclk_2 1 0 2 -140 150 1330
+preplace netloc audio_in_0_0_1 1 0 2 -190J 60 N
+preplace netloc audio_in_0_0_2 1 0 2 -180J 80 N
+preplace netloc chorus_channel_0_delay_0 1 0 2 -170 110 1350
+preplace netloc chorus_channel_1_delay_0 1 0 2 -160 120 1360
+preplace netloc effect_on_off_0_audio_out_l 1 2 1 N 90
+preplace netloc effect_on_off_0_audio_out_r 1 2 1 N 110
+preplace netloc mix_0_0_1 1 0 1 -210J 150n
+preplace netloc mix_0_1 1 0 1 NJ 290
+preplace netloc switch_1 1 0 2 -200J 140 N
+preplace netloc ws_in_0_1 1 0 2 -150 130 1340
+preplace netloc ws_in_1 1 0 1 -230 730n
+preplace netloc lfo_speed_1 1 0 1 -240J 620n
+preplace netloc max_delay_1 1 0 1 -200 600n
+preplace netloc min_delay_1 1 0 1 -250 570n
+preplace netloc chorus_channel_0|aclk_1 1 0 2 NJ 440 N
+preplace netloc chorus_channel_0|audio_in_0_1 1 0 2 NJ 400 920
+preplace netloc chorus_channel_0|chorus_LFO_0_sample_delay 1 1 1 920 520n
+preplace netloc chorus_channel_0|delay_delay 1 2 1 N 480
+preplace netloc chorus_channel_0|lfo_speed_1 1 0 1 N 620
+preplace netloc chorus_channel_0|max_delay_1 1 0 1 N 600
+preplace netloc chorus_channel_0|min_delay_1 1 0 1 N 580
+preplace netloc chorus_channel_0|mix_0_1 1 0 2 NJ 500 N
+preplace netloc chorus_channel_0|ws_in_0_1 1 0 2 600 460 N
+levelinfo -pg 1 -270 690 1575 1770
+levelinfo -hier chorus_channel_0 * 760 1060 *
+pagesize -pg 1 -db -bbox -sgen -460 -20 1940 1240
+pagesize -hier chorus_channel_0 -db -bbox -sgen 570 380 1220 680
+"
+}
+0

@@ -1,0 +1,414 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6A97E3D7E61C917C",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../ip.gen/sources_1/bd/Chorus_effect",
+      "name": "Chorus_effect",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2"
+    },
+    "design_tree": {
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "chorus_channel_0": "",
+      "Delay_mix_0": "",
+      "chorus_channel_1": "",
+      "chorus_0": ""
+    },
+    "ports": {
+      "aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "11289000"
+          }
+        }
+      },
+      "ws_in": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "44000"
+          }
+        }
+      },
+      "audio_in_left": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "delay_0_0": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "audio_in_right": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "lfo_speed": {
+        "direction": "I",
+        "left": "12",
+        "right": "0"
+      },
+      "max_delay": {
+        "direction": "I",
+        "left": "12",
+        "right": "0"
+      },
+      "min_delay": {
+        "direction": "I",
+        "left": "12",
+        "right": "0"
+      },
+      "feedback_chorus": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "mix_chorus": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "Chorus_effect_util_vector_logic_0_0",
+        "xci_path": "ip\\Chorus_effect_util_vector_logic_0_0\\Chorus_effect_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "Chorus_effect_util_vector_logic_0_1",
+        "xci_path": "ip\\Chorus_effect_util_vector_logic_0_1\\Chorus_effect_util_vector_logic_0_1.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "chorus_channel_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "chorus_channel.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "chorus_channel.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "chorus_channel.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "chorus_channel.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "audio_in_0": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "ws_in_0": {
+            "direction": "I"
+          },
+          "aclk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "mix_0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "delay_0": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "min_delay": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "max_delay": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "lfo_speed": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          }
+        },
+        "post_compiled_compname": "chorus_channel_inst_1",
+        "architecture": "artix7",
+        "variant_info": {
+          "chorus_channel.bd": {
+            "scoped_diagram": "chorus_channel_inst_1.bd",
+            "design_checksum": "0xDCBE0D08",
+            "ref_name": "chorus_channel",
+            "ref_subinst_path": "Chorus_effectchorus_channel_1",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "Delay_mix_0": {
+        "vlnv": "xilinx.com:module_ref:Delay_mix:1.0",
+        "xci_name": "Chorus_effect_Delay_mix_0_0",
+        "xci_path": "ip\\Chorus_effect_Delay_mix_0_0\\Chorus_effect_Delay_mix_0_0.xci",
+        "inst_hier_path": "Delay_mix_0",
+        "reference_info": {
+          "ref_type": "unknown",
+          "ref_name": "Delay_mix",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "audio_in_l": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "audio_in_r": {
+            "direction": "I",
+            "left": "23",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "audio_in_l_delay": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "audio_in_r_delay": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "mix": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "audio_out_l": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "audio_out_r": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "chorus_channel_1": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "chorus_channel.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "chorus_channel.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "chorus_channel.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "chorus_channel.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "audio_in_0": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "ws_in_0": {
+            "direction": "I"
+          },
+          "aclk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "mix_0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "delay_0": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "min_delay": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "max_delay": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "lfo_speed": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          }
+        },
+        "post_compiled_compname": "chorus_channel_inst_0",
+        "architecture": "artix7",
+        "variant_info": {
+          "chorus_channel.bd": {
+            "scoped_diagram": "chorus_channel_inst_0.bd",
+            "design_checksum": "0xDCBE0D08",
+            "ref_name": "chorus_channel",
+            "ref_subinst_path": "Chorus_effect_chorus_channel_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "chorus_0": {
+        "vlnv": "xilinx.com:user:chorus:1.0",
+        "xci_name": "Chorus_effect_chorus_0_0",
+        "xci_path": "ip\\Chorus_effect_chorus_0_0\\Chorus_effect_chorus_0_0.xci",
+        "inst_hier_path": "chorus_0",
+        "interface_ports": {
+          "S_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "S_AXI"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Delay_mix_0_audio_out_l": {
+        "ports": [
+          "Delay_mix_0/audio_out_l",
+          "delay_0_0"
+        ]
+      },
+      "aclk_1": {
+        "ports": [
+          "aclk",
+          "util_vector_logic_0/Op1",
+          "chorus_channel_1/aclk"
+        ]
+      },
+      "aclk_2": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "chorus_channel_0/aclk"
+        ]
+      },
+      "audio_in_0_0_1": {
+        "ports": [
+          "audio_in_left",
+          "chorus_channel_0/audio_in_0",
+          "Delay_mix_0/audio_in_l"
+        ]
+      },
+      "audio_in_0_0_2": {
+        "ports": [
+          "audio_in_right",
+          "chorus_channel_1/audio_in_0",
+          "Delay_mix_0/audio_in_r"
+        ]
+      },
+      "chorus_channel_0_delay_0": {
+        "ports": [
+          "chorus_channel_0/delay_0",
+          "Delay_mix_0/audio_in_l_delay"
+        ]
+      },
+      "chorus_channel_1_delay_0": {
+        "ports": [
+          "chorus_channel_1/delay_0",
+          "Delay_mix_0/audio_in_r_delay"
+        ]
+      },
+      "lfo_speed_0_0_1": {
+        "ports": [
+          "lfo_speed"
+        ]
+      },
+      "max_delay_0_0_1": {
+        "ports": [
+          "max_delay"
+        ]
+      },
+      "min_delay_0_0_1": {
+        "ports": [
+          "min_delay"
+        ]
+      },
+      "mix_0_0_1": {
+        "ports": [
+          "feedback_chorus",
+          "chorus_channel_1/mix_0",
+          "chorus_channel_0/mix_0"
+        ]
+      },
+      "mix_0_1": {
+        "ports": [
+          "mix_chorus",
+          "Delay_mix_0/mix"
+        ]
+      },
+      "ws_in_0_1": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "chorus_channel_0/ws_in_0"
+        ]
+      },
+      "ws_in_1": {
+        "ports": [
+          "ws_in",
+          "util_vector_logic_1/Op1",
+          "chorus_channel_1/ws_in_0"
+        ]
+      }
+    }
+  }
+}

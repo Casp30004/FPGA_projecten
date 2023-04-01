@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-775,-407",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -110 -y 150 -defaultsOSRD
+preplace port port-id_ws_in -pg 1 -lvl 0 -x -110 -y 100 -defaultsOSRD
+preplace portBus audio_in_left -pg 1 -lvl 0 -x -110 -y -10 -defaultsOSRD
+preplace portBus audio_in_right -pg 1 -lvl 0 -x -110 -y 120 -defaultsOSRD
+preplace portBus audio_out_l -pg 1 -lvl 3 -x 440 -y 150 -defaultsOSRD
+preplace portBus audio_out_r -pg 1 -lvl 3 -x 440 -y 110 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x -10 -y -150 -defaultsOSRD
+preplace inst chorus_0 -pg 1 -lvl 2 -x 260 -y 140 -defaultsOSRD
+preplace netloc audio_in_left_1 1 0 2 NJ -10 90
+preplace netloc audio_in_right_1 1 0 2 NJ 120 80
+preplace netloc aclk_1 1 0 2 NJ 150 100
+preplace netloc ws_in_1 1 0 2 NJ 100 70
+preplace netloc chorus_0_audio_out_l 1 2 1 420 130n
+preplace netloc chorus_0_audio_out_r 1 2 1 410 110n
+preplace netloc xlconstant_0_dout 1 1 1 110 -150n
+levelinfo -pg 1 -110 -10 260 440
+pagesize -pg 1 -db -bbox -sgen -290 -210 600 570
+"
+}
+0

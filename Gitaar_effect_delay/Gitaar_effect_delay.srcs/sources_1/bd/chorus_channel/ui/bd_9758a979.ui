@@ -1,0 +1,34 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-474,-163",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -30 -y 50 -defaultsOSRD
+preplace port port-id_ws_in_1 -pg 1 -lvl 0 -x -30 -y 230 -defaultsOSRD
+preplace portBus audio_in_1 -pg 1 -lvl 0 -x -30 -y 70 -defaultsOSRD
+preplace portBus delay -pg 1 -lvl 5 -x 1000 -y 150 -defaultsOSRD
+preplace portBus mix_0 -pg 1 -lvl 0 -x -30 -y 90 -defaultsOSRD
+preplace portBus delay_sample -pg 1 -lvl 0 -x -30 -y 470 -defaultsOSRD
+preplace inst feedback_0 -pg 1 -lvl 3 -x 570 -y 80 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 880 -y 350 -defaultsOSRD
+preplace inst c_addsub_0 -pg 1 -lvl 2 -x 280 -y 160 -defaultsOSRD
+preplace inst chorus_mem_driver_0 -pg 1 -lvl 3 -x 570 -y 430 -defaultsOSRD
+preplace netloc Net 1 0 4 N 50 N 50 380 320 740
+preplace netloc audio_in_1_1 1 0 2 N 70 120
+preplace netloc blk_mem_gen_0_douta 1 2 2 390 330 730J
+preplace netloc c_addsub_0_S 1 2 1 370 160n
+preplace netloc chorus_mem_driver_0_adress_out 1 3 1 750 320n
+preplace netloc chorus_mem_driver_0_data_write 1 3 1 770 360n
+preplace netloc chorus_mem_driver_0_delay 1 2 3 390 150 760 150 N
+preplace netloc chorus_mem_driver_0_write_enable 1 3 1 N 400
+preplace netloc delay_sample_1 1 0 3 NJ 470 NJ 470 NJ
+preplace netloc feedback_0_audio_out 1 1 3 130 230 NJ 230 740
+preplace netloc mix_0_1 1 0 3 NJ 90 N 90 NJ
+preplace netloc ws_in_1_1 1 0 3 NJ 230 120J 390 N
+levelinfo -pg 1 -30 100 280 570 880 1000
+pagesize -pg 1 -db -bbox -sgen -210 -10 1120 530
+"
+}
+0

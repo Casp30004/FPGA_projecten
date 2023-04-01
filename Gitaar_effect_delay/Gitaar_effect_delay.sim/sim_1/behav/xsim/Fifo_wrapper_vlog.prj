@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Gitaar_effect_delay.gen/sources_1/bd/clk/ipshared/4e49" \
+"../../../../Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_fifo_generator_0_0/sim/Fifo_fifo_generator_0_0.v" \
+"../../../../Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_fifo_generator_0_1/sim/Fifo_fifo_generator_0_1.v" \
+"../../../../Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_xlconstant_0_0/sim/Fifo_xlconstant_0_0.v" \
+"../../../../Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_reset_inv_0_0/sim/Fifo_reset_inv_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

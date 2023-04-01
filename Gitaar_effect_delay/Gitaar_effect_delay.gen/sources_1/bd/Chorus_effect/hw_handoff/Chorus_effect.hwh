@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb  3 15:17:03 2023" VIVADOVERSION="2022.1">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.2" DEVICE="7a100t" NAME="Chorus_effect" PACKAGE="csg324" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="11289000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
+        <CONNECTION INSTANCE="chorus_channel_1" PORT="aclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="44000" DIR="I" NAME="ws_in" SIGIS="clk" SIGNAME="External_Ports_ws_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
+        <CONNECTION INSTANCE="chorus_channel_1" PORT="ws_in_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="23" NAME="audio_in_left" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_audio_in_left">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_channel_0" PORT="audio_in_0"/>
+        <CONNECTION INSTANCE="Delay_mix_0" PORT="audio_in_l"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="23" NAME="delay_0_0" RIGHT="0" SIGIS="undef" SIGNAME="Delay_mix_0_audio_out_l">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Delay_mix_0" PORT="audio_out_l"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="23" NAME="audio_in_right" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_audio_in_right">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_channel_1" PORT="audio_in_0"/>
+        <CONNECTION INSTANCE="Delay_mix_0" PORT="audio_in_r"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="12" NAME="lfo_speed" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="12" NAME="max_delay" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="12" NAME="min_delay" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="7" NAME="feedback_chorus" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_feedback_chorus">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_channel_1" PORT="mix_0"/>
+        <CONNECTION INSTANCE="chorus_channel_0" PORT="mix_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="mix_chorus" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_mix_chorus">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Delay_mix_0" PORT="mix"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Delay_mix_0" HWVERSION="1.0" INSTANCE="Delay_mix_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Delay_mix" VLNV="xilinx.com:module_ref:Delay_mix:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Chorus_effect_Delay_mix_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="23" NAME="audio_in_l" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_audio_in_left">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_in_left"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="audio_in_r" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_audio_in_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_in_right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="audio_in_l_delay" RIGHT="0" SIGIS="undef" SIGNAME="chorus_channel_0_delay_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chorus_channel_0" PORT="delay_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="audio_in_r_delay" RIGHT="0" SIGIS="undef" SIGNAME="chorus_channel_1_delay_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chorus_channel_1" PORT="delay_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="mix" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_mix_chorus">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mix_chorus"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="audio_out_l" RIGHT="0" SIGIS="undef" SIGNAME="Delay_mix_0_audio_out_l">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="delay_0_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="audio_out_r" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE BD="chorus_channel_inst_1" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/chorus_channel_0" INSTANCE="chorus_channel_0" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="chorus_channel.bd"/>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="chorus_channel.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="chorus_channel.bd"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="chorus_channel.bd"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="23" NAME="audio_in_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_audio_in_left">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_in_left"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ws_in_0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="11289000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="mix_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_feedback_chorus">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="feedback_chorus"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="delay_0" RIGHT="0" SIGIS="undef" SIGNAME="chorus_channel_0_delay_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Delay_mix_0" PORT="audio_in_l_delay"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="min_delay" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="11" NAME="max_delay" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="10" NAME="lfo_speed" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE BD="chorus_channel_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/chorus_channel_1" INSTANCE="chorus_channel_1" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="chorus_channel.bd"/>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="chorus_channel.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="chorus_channel.bd"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="chorus_channel.bd"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="23" NAME="audio_in_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_audio_in_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_in_right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ws_in_0" SIGIS="undef" SIGNAME="External_Ports_ws_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ws_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="11289000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="mix_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_feedback_chorus">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="feedback_chorus"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="delay_0" RIGHT="0" SIGIS="undef" SIGNAME="chorus_channel_1_delay_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Delay_mix_0" PORT="audio_in_r_delay"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="min_delay" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="11" NAME="max_delay" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="10" NAME="lfo_speed" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/util_vector_logic_0" HWVERSION="2.0" INSTANCE="util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Chorus_effect_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_aclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chorus_channel_0" PORT="aclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/util_vector_logic_1" HWVERSION="2.0" INSTANCE="util_vector_logic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Chorus_effect_util_vector_logic_0_1"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_ws_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ws_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chorus_channel_0" PORT="ws_in_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

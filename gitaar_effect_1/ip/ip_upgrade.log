@@ -1,0 +1,79 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat Apr  1 12:06:47 2023
+| Host         : DESKTOP-6QOF9GB running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Chorus_effect_chorus_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Chorus_effect_chorus_0_0 (xilinx.com:user:chorus:1.0) from (Rev. 2) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat Apr  1 11:50:14 2023
+| Host         : DESKTOP-6QOF9GB running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'delay_channel_1_xlconstant_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of delay_channel_1_xlconstant_0_0 (xilinx.com:ip:xlconstant:1.1 (Rev. 7)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat Apr  1 11:50:04 2023
+| Host         : DESKTOP-6QOF9GB running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_clk_wiz_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of clk_clk_wiz_0_0 (xilinx.com:ip:clk_wiz:6.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat Apr  1 11:50:00 2023
+| Host         : DESKTOP-6QOF9GB running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Chorus_effect_chorus_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Chorus_effect_chorus_0_0 (xilinx.com:user:chorus:1.0 (Rev. 2)) to Vivado generation flows.
+

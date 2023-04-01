@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Gitaar_effect_delay.ip_user_files/bd/Fifo/sim/Fifo.vhd" \
+"../../../../Gitaar_effect_delay.gen/sources_1/bd/Fifo/hdl/Fifo_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

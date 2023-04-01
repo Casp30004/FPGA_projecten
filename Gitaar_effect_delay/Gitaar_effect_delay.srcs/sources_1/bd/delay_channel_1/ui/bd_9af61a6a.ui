@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-500,-397",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -90 -y 70 -defaultsOSRD
+preplace port port-id_ws_in -pg 1 -lvl 0 -x -90 -y 50 -defaultsOSRD
+preplace portBus audio_in -pg 1 -lvl 0 -x -90 -y 90 -defaultsOSRD
+preplace portBus delay_sample -pg 1 -lvl 0 -x -90 -y 130 -defaultsOSRD
+preplace portBus delay -pg 1 -lvl 4 -x 1010 -y 50 -defaultsOSRD
+preplace portBus mix -pg 1 -lvl 0 -x -90 -y -270 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 890 -y 200 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -x 480 -y 300 -defaultsOSRD
+preplace inst feedback_0 -pg 1 -lvl 2 -x 480 -y -210 -defaultsOSRD
+preplace inst c_addsub_0 -pg 1 -lvl 1 -x 110 -y -200 -defaultsOSRD
+preplace inst delay_mem_driver_0 -pg 1 -lvl 2 -x 480 -y 30 -defaultsOSRD
+preplace netloc Mem_chorus_driver_0_delay 1 1 1 N -220
+preplace netloc Net 1 0 3 -70 200 N 200 N
+preplace netloc audio_in_1 1 0 1 -60 -210n
+preplace netloc feedback_0_audio_out 1 0 3 -50 -280 NJ -280 640
+preplace netloc mix_1 1 0 2 NJ -270 200J
+preplace netloc xlconstant_0_dout 1 2 1 640 220n
+levelinfo -pg 1 -90 110 480 890 1010
+pagesize -pg 1 -db -bbox -sgen -270 -290 1130 390
+"
+}
+0

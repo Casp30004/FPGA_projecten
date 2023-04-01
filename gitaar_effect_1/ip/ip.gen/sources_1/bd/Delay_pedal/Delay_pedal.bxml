@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="40">
+  <CompositeFile CompositeFileTopName="Delay_pedal" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1674043113"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1674043113"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1674043113"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1674043113"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth\Delay_pedal.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\Delay_pedal.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="Delay_pedal_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="hw_handoff\Delay_pedal.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="Delay_pedal.bda">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="synth\Delay_pedal.hwdef">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\Delay_pedal.protoinst">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+    </FileCollection>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="/delay_channel_left" IsPR="false" State="Stale">
+        <ActiveVariantSynth FileName="bd\delay_channel_1_inst_0\delay_channel_1_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd\delay_channel_1_inst_0\delay_channel_1_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd\delay_channel_1_inst_0\delay_channel_1_inst_0.bd" BDFileset="delay_channel_1_inst_0" BDSourceFile="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\delay_channel_1\delay_channel_1.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+      <BlockContainer InstPath="/delay_channel_right" IsPR="false" State="Stale">
+        <ActiveVariantSynth FileName="bd\delay_channel_1_inst_1\delay_channel_1_inst_1.bd"/>
+        <ActiveVariantSim FileName="bd\delay_channel_1_inst_1\delay_channel_1_inst_1.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd\delay_channel_1_inst_1\delay_channel_1_inst_1.bd" BDFileset="delay_channel_1_inst_1" BDSourceFile="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\delay_channel_1\delay_channel_1.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="delay_channel_1" Type="Block Design" SubInstancePath="Delay_pedaldelay_channel_1_1">
+        <TopFile Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\delay_channel_1\delay_channel_1.bd"/>
+        <FileCollection>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\feedback.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\delay_mem_driver.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\Audio_to_axis.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\26_to_24_bits.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\delay_channel_1\delay_channel_1.bd"/>
+        </FileCollection>
+      </ModuleReference>
+      <ModuleReference TargetName="delay_channel_1" Type="Block Design" SubInstancePath="Delay_pedal_delay_channel_1_0">
+        <TopFile Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\delay_channel_1\delay_channel_1.bd"/>
+        <FileCollection>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\feedback.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\delay_mem_driver.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\Audio_to_axis.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\26_to_24_bits.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\delay_channel_1\delay_channel_1.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
+  </CompositeFile>
+</Root>

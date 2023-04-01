@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="40">
+  <CompositeFile CompositeFileTopName="Chorus_effect" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1675433823"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1675433823"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1675433823"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1675433823"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth\Chorus_effect.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\Chorus_effect.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="Chorus_effect_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="hw_handoff\Chorus_effect.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="Chorus_effect.bda">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="synth\Chorus_effect.hwdef">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\Chorus_effect.protoinst">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+    </FileCollection>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="/chorus_channel_0" IsPR="false" State="Generated">
+        <ActiveVariantSynth FileName="bd\chorus_channel_inst_1\chorus_channel_inst_1.bd"/>
+        <ActiveVariantSim FileName="bd\chorus_channel_inst_1\chorus_channel_inst_1.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd\chorus_channel_inst_1\chorus_channel_inst_1.bd" BDFileset="chorus_channel_inst_1" BDSourceFile="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\chorus_channel\chorus_channel.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+      <BlockContainer InstPath="/chorus_channel_1" IsPR="false" State="Generated">
+        <ActiveVariantSynth FileName="bd\chorus_channel_inst_0\chorus_channel_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd\chorus_channel_inst_0\chorus_channel_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd\chorus_channel_inst_0\chorus_channel_inst_0.bd" BDFileset="chorus_channel_inst_0" BDSourceFile="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\chorus_channel\chorus_channel.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="chorus_channel" Type="Block Design" SubInstancePath="Chorus_effectchorus_channel_1">
+        <TopFile Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\chorus_channel\chorus_channel.bd"/>
+        <FileCollection>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\feedback.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\chorus_mem_driver.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\chorus_LFO.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\chorus_channel\chorus_channel.bd"/>
+        </FileCollection>
+      </ModuleReference>
+      <ModuleReference TargetName="chorus_channel" Type="Block Design" SubInstancePath="Chorus_effect_chorus_channel_0">
+        <TopFile Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\chorus_channel\chorus_channel.bd"/>
+        <FileCollection>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\feedback.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\chorus_mem_driver.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\new\chorus_LFO.vhd"/>
+          <File Name="..\..\..\..\Gitaar_effect_delay.srcs\sources_1\bd\chorus_channel\chorus_channel.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
+  </CompositeFile>
+</Root>

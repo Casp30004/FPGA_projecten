@@ -1,0 +1,161 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x120B9DE564F37E24",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../ip.gen/sources_1/bd/effects_pedal",
+      "name": "effects_pedal",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xlconstant_0": "",
+      "chorus_0": ""
+    },
+    "ports": {
+      "aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "effects_pedal_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "11289000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ws_in": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "effects_pedal_ws_in",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "44000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "audio_in_left": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "audio_in_right": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "audio_out_l": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "audio_out_r": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      }
+    },
+    "components": {
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "effects_pedal_xlconstant_0_0",
+        "xci_path": "ip\\effects_pedal_xlconstant_0_0\\effects_pedal_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "chorus_0": {
+        "vlnv": "xilinx.com:user:chorus:1.0",
+        "xci_name": "effects_pedal_chorus_0_1",
+        "xci_path": "ip\\effects_pedal_chorus_0_1\\effects_pedal_chorus_0_1.xci",
+        "inst_hier_path": "chorus_0",
+        "interface_ports": {
+          "S_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "S_AXI"
+          }
+        }
+      }
+    },
+    "nets": {
+      "aclk_1": {
+        "ports": [
+          "aclk",
+          "chorus_0/clka",
+          "chorus_0/S_AXI_ACLK"
+        ]
+      },
+      "audio_in_left_1": {
+        "ports": [
+          "audio_in_left",
+          "chorus_0/audio_in_L"
+        ]
+      },
+      "audio_in_right_1": {
+        "ports": [
+          "audio_in_right",
+          "chorus_0/audio_in_R"
+        ]
+      },
+      "chorus_0_audio_out_l": {
+        "ports": [
+          "chorus_0/audio_out_l",
+          "audio_out_l"
+        ]
+      },
+      "chorus_0_audio_out_r": {
+        "ports": [
+          "chorus_0/audio_out_r",
+          "audio_out_r"
+        ]
+      },
+      "ws_in_1": {
+        "ports": [
+          "ws_in",
+          "chorus_0/ws_in"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "chorus_0/S_AXI_ARESETN"
+        ]
+      }
+    }
+  }
+}

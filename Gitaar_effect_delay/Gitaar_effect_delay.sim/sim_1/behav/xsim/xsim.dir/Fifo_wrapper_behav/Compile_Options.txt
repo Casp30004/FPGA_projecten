@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "fifo_generator_v13_2_7" -L "xlconstant_v1_1_7" -L "util_vector_logic_v2_0_2" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "Fifo_wrapper_behav" "xil_defaultlib.Fifo_wrapper" "xil_defaultlib.glbl" -log "elaborate.log" 

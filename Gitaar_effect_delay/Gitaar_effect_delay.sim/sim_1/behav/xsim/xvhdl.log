@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/sim/Fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Fifo'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.gen/sources_1/bd/Fifo/hdl/Fifo_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Fifo_wrapper'

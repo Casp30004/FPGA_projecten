@@ -1,0 +1,40 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-883,-107",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_audio -pg 1 -lvl 0 -x -640 -y 250 -defaultsOSRD
+preplace port port-id_full_0 -pg 1 -lvl 4 -x 700 -y 20 -defaultsOSRD
+preplace port port-id_full_1 -pg 1 -lvl 4 -x 700 -y 330 -defaultsOSRD
+preplace port port-id_empty_1 -pg 1 -lvl 4 -x 700 -y 350 -defaultsOSRD
+preplace port port-id_empty_0 -pg 1 -lvl 4 -x 700 -y 40 -defaultsOSRD
+preplace portBus din_0 -pg 1 -lvl 0 -x -640 -y 130 -defaultsOSRD
+preplace portBus dout_0 -pg 1 -lvl 4 -x 700 -y 310 -defaultsOSRD
+preplace portBus din_1 -pg 1 -lvl 0 -x -640 -y 450 -defaultsOSRD
+preplace portBus dout_1 -pg 1 -lvl 4 -x 700 -y 630 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 3 -x 510 -y 170 -defaultsOSRD
+preplace inst fifo_generator_1 -pg 1 -lvl 3 -x 510 -y 490 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -x 220 -y 310 -defaultsOSRD
+preplace inst reset_inv_0 -pg 1 -lvl 1 -x -140 -y 200 -defaultsOSRD
+preplace netloc clk_0_1 1 0 3 -620J 260 10 250 300
+preplace netloc din_0_1 1 0 3 NJ 130 N 130 N
+preplace netloc din_1_1 1 0 3 N 450 N 450 N
+preplace netloc fifo_generator_0_dout 1 2 2 330 310 NJ
+preplace netloc fifo_generator_0_empty 1 2 2 340 30 680J
+preplace netloc fifo_generator_0_full 1 2 2 320 20 NJ
+preplace netloc fifo_generator_0_prog_full 1 2 2 340 320 680
+preplace netloc fifo_generator_1_dout 1 2 2 330 630 NJ
+preplace netloc fifo_generator_1_empty 1 2 2 340 350 NJ
+preplace netloc fifo_generator_1_full 1 2 2 330 330 NJ
+preplace netloc fifo_generator_1_prog_full 1 2 2 340 640 680
+preplace netloc reset_inv_0_Res 1 1 2 NJ 200 310
+preplace netloc xlconstant_0_dout 1 2 1 320 150n
+levelinfo -pg 1 -640 -140 220 510 700
+pagesize -pg 1 -db -bbox -sgen -770 0 840 650
+"
+}
+{
+   "da_board_cnt":"2"
+}

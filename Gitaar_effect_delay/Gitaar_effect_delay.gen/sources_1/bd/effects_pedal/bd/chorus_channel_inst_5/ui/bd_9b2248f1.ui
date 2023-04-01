@@ -1,0 +1,31 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-365,-219",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_ws_in_0 -pg 1 -lvl 0 -x -150 -y 180 -defaultsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -150 -y 160 -defaultsOSRD
+preplace portBus audio_in_0 -pg 1 -lvl 0 -x -150 -y 200 -defaultsOSRD
+preplace portBus mix_0 -pg 1 -lvl 0 -x -150 -y 220 -defaultsOSRD
+preplace portBus delay_0 -pg 1 -lvl 2 -x 360 -y 200 -defaultsOSRD
+preplace portBus lfo_speed_0 -pg 1 -lvl 0 -x -150 -y 90 -defaultsOSRD
+preplace portBus max_delay_0 -pg 1 -lvl 0 -x -150 -y 70 -defaultsOSRD
+preplace portBus min_delay_0 -pg 1 -lvl 0 -x -150 -y 50 -defaultsOSRD
+preplace inst delay -pg 1 -lvl 1 -x 160 -y 232 -defaultsOSRD
+preplace inst chorus_LFO_0 -pg 1 -lvl 1 -x 160 -y 60 -defaultsOSRD
+preplace netloc aclk_1 1 0 1 -110J 160n
+preplace netloc audio_in_0_1 1 0 1 -120J 200n
+preplace netloc chorus_LFO_0_sample_delay 1 0 2 -110 322 330
+preplace netloc delay_delay 1 1 1 340 200n
+preplace netloc lfo_speed_0_1 1 0 1 N 90
+preplace netloc max_delay_0_1 1 0 1 N 70
+preplace netloc min_delay_0_1 1 0 1 N 50
+preplace netloc mix_0_1 1 0 1 -130J 220n
+preplace netloc ws_in_0_1 1 0 1 -100J 30n
+levelinfo -pg 1 -150 160 360
+pagesize -pg 1 -db -bbox -sgen -330 -30 510 490
+"
+}
+

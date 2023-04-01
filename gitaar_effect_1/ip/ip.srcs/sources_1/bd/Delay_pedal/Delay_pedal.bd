@@ -1,0 +1,445 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xC37499CA6382DD63",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../ip.gen/sources_1/bd/Delay_pedal",
+      "name": "Delay_pedal",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2"
+    },
+    "design_tree": {
+      "util_vector_logic_1": "",
+      "delay_channel_right": "",
+      "Delay_mix_0": "",
+      "util_vector_logic_0": "",
+      "delay_channel_left": "",
+      "ms_to_sample_delay_0": "",
+      "ms_to_sample_delay_1": ""
+    },
+    "ports": {
+      "mclk_in": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "11289000"
+          }
+        }
+      },
+      "ws_in": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "44000"
+          }
+        }
+      },
+      "audio_in_L": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "audio_in_R": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "audio_out_l": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "audio_out_r": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "feedback_r": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "feedback_l": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "delay_ms_l": {
+        "direction": "I",
+        "left": "9",
+        "right": "0"
+      },
+      "delay_ms_r": {
+        "direction": "I",
+        "left": "9",
+        "right": "0"
+      },
+      "dry_wet_mix": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "Delay_pedal_util_vector_logic_0_1",
+        "xci_path": "ip\\Delay_pedal_util_vector_logic_0_1\\Delay_pedal_util_vector_logic_0_1.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "delay_channel_right": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "delay_channel_1.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "delay_channel_1.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "delay_channel_1.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "delay_channel_1.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "delay_0": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "mix_0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "delay_sample_0": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ws_in_0": {
+            "direction": "I"
+          },
+          "audio_in_0": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "aclk_0": {
+            "direction": "I"
+          }
+        },
+        "post_compiled_compname": "delay_channel_1_inst_1",
+        "architecture": "artix7",
+        "variant_info": {
+          "delay_channel_1.bd": {
+            "scoped_diagram": "delay_channel_1_inst_1.bd",
+            "design_checksum": "0x44E2D960",
+            "ref_name": "delay_channel_1",
+            "ref_subinst_path": "Delay_pedaldelay_channel_1_1",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "Delay_mix_0": {
+        "vlnv": "xilinx.com:module_ref:Delay_mix:1.0",
+        "xci_name": "Delay_pedal_Delay_mix_0_0",
+        "xci_path": "ip\\Delay_pedal_Delay_mix_0_0\\Delay_pedal_Delay_mix_0_0.xci",
+        "inst_hier_path": "Delay_mix_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Delay_mix",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "audio_in_l": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "audio_in_r": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "audio_in_l_delay": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "audio_in_r_delay": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "mix": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "audio_out_l": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "audio_out_r": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "Delay_pedal_util_vector_logic_0_0",
+        "xci_path": "ip\\Delay_pedal_util_vector_logic_0_0\\Delay_pedal_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "delay_channel_left": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "delay_channel_1.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "delay_channel_1.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "delay_channel_1.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "delay_channel_1.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "delay_0": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "mix_0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "delay_sample_0": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ws_in_0": {
+            "direction": "I"
+          },
+          "audio_in_0": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "aclk_0": {
+            "direction": "I"
+          }
+        },
+        "post_compiled_compname": "delay_channel_1_inst_0",
+        "architecture": "artix7",
+        "variant_info": {
+          "delay_channel_1.bd": {
+            "scoped_diagram": "delay_channel_1_inst_0.bd",
+            "design_checksum": "0x44E2D960",
+            "ref_name": "delay_channel_1",
+            "ref_subinst_path": "Delay_pedal_delay_channel_1_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "ms_to_sample_delay_0": {
+        "vlnv": "xilinx.com:module_ref:ms_to_sample_delay:1.0",
+        "xci_name": "Delay_pedal_ms_to_sample_delay_0_0",
+        "xci_path": "ip\\Delay_pedal_ms_to_sample_delay_0_0\\Delay_pedal_ms_to_sample_delay_0_0.xci",
+        "inst_hier_path": "ms_to_sample_delay_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ms_to_sample_delay",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ms_delay": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "sample_delay": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "ms_to_sample_delay_1": {
+        "vlnv": "xilinx.com:module_ref:ms_to_sample_delay:1.0",
+        "xci_name": "Delay_pedal_ms_to_sample_delay_0_1",
+        "xci_path": "ip\\Delay_pedal_ms_to_sample_delay_0_1\\Delay_pedal_ms_to_sample_delay_0_1.xci",
+        "inst_hier_path": "ms_to_sample_delay_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ms_to_sample_delay",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ms_delay": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "sample_delay": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Delay_mix_0_audio_out_l": {
+        "ports": [
+          "Delay_mix_0/audio_out_l",
+          "audio_out_l"
+        ]
+      },
+      "Delay_mix_0_audio_out_r": {
+        "ports": [
+          "Delay_mix_0/audio_out_r",
+          "audio_out_r"
+        ]
+      },
+      "audio_in_0_0_1": {
+        "ports": [
+          "audio_in_R",
+          "delay_channel_right/audio_in_0",
+          "Delay_mix_0/audio_in_r"
+        ]
+      },
+      "audio_in_L_1": {
+        "ports": [
+          "audio_in_L",
+          "Delay_mix_0/audio_in_l",
+          "delay_channel_left/audio_in_0"
+        ]
+      },
+      "delay_channel_1_1_delay_0": {
+        "ports": [
+          "delay_channel_right/delay_0",
+          "Delay_mix_0/audio_in_r_delay"
+        ]
+      },
+      "delay_channel_left_delay_0": {
+        "ports": [
+          "delay_channel_left/delay_0",
+          "Delay_mix_0/audio_in_l_delay"
+        ]
+      },
+      "mclk_in_1": {
+        "ports": [
+          "mclk_in",
+          "util_vector_logic_1/Op1",
+          "delay_channel_right/aclk_0"
+        ]
+      },
+      "mix_0_0_1": {
+        "ports": [
+          "feedback_r",
+          "delay_channel_right/mix_0"
+        ]
+      },
+      "mix_0_0_2": {
+        "ports": [
+          "feedback_l",
+          "delay_channel_left/mix_0"
+        ]
+      },
+      "mix_0_1": {
+        "ports": [
+          "dry_wet_mix",
+          "Delay_mix_0/mix"
+        ]
+      },
+      "ms_delay_0_1": {
+        "ports": [
+          "delay_ms_l",
+          "ms_to_sample_delay_0/ms_delay"
+        ]
+      },
+      "ms_delay_0_2": {
+        "ports": [
+          "delay_ms_r",
+          "ms_to_sample_delay_1/ms_delay"
+        ]
+      },
+      "ms_to_sample_delay_0_sample_delay": {
+        "ports": [
+          "ms_to_sample_delay_0/sample_delay",
+          "delay_channel_left/delay_sample_0"
+        ]
+      },
+      "ms_to_sample_delay_1_sample_delay": {
+        "ports": [
+          "ms_to_sample_delay_1/sample_delay",
+          "delay_channel_right/delay_sample_0"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "delay_channel_left/ws_in_0"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "delay_channel_left/aclk_0"
+        ]
+      },
+      "ws_in_1": {
+        "ports": [
+          "ws_in",
+          "delay_channel_right/ws_in_0",
+          "util_vector_logic_0/Op1"
+        ]
+      }
+    }
+  }
+}

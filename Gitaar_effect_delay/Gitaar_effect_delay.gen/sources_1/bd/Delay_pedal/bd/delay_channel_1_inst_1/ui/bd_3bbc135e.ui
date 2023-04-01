@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-634,-272",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_ws_in_0 -pg 1 -lvl 0 -x -110 -y 80 -defaultsOSRD
+preplace port port-id_aclk_0 -pg 1 -lvl 0 -x -110 -y 100 -defaultsOSRD
+preplace portBus delay_0 -pg 1 -lvl 3 -x 760 -y 190 -defaultsOSRD
+preplace portBus mix_0 -pg 1 -lvl 0 -x -110 -y 230 -defaultsOSRD
+preplace portBus delay_sample_0 -pg 1 -lvl 0 -x -110 -y 210 -defaultsOSRD
+preplace portBus audio_in_0 -pg 1 -lvl 0 -x -110 -y 60 -defaultsOSRD
+preplace inst delay -pg 1 -lvl 2 -x 600 -y 190 -defaultsOSRD
+preplace inst filter_stage -pg 1 -lvl 1 -x 170 -y 80 -defaultsOSRD
+preplace netloc aclk_0_1 1 0 2 -90 150 N
+preplace netloc audio_in_0_1 1 0 1 N 60
+preplace netloc delay_delay 1 2 1 N 190
+preplace netloc delay_sample_0_1 1 0 2 NJ 210 NJ
+preplace netloc filter_stage_output_audio 1 1 1 310 80n
+preplace netloc mix_0_1 1 0 2 NJ 230 NJ
+preplace netloc ws_in_0_1 1 0 2 -80 190 N
+levelinfo -pg 1 -110 170 600 760
+pagesize -pg 1 -db -bbox -sgen -300 0 900 500
+"
+}
+0

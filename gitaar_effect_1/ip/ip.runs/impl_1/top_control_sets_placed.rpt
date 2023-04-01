@@ -1,0 +1,100 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat Apr  1 11:54:45 2023
+| Host         : DESKTOP-6QOF9GB running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    22 |
+|    Minimum number of control sets                        |    22 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    57 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    22 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     7 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    13 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             176 |           50 |
+| No           | No                    | Yes                    |              33 |            9 |
+| No           | Yes                   | No                     |              26 |            8 |
+| Yes          | No                    | No                     |             146 |           45 |
+| Yes          | No                    | Yes                    |             178 |           54 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+--------------+
+|                Clock Signal                |                                       Enable Signal                                       |                          Set/Reset Signal                         | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+--------------+
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | i2s_transceiver_1/sd_tx_i_1_n_0                                                           | i2s_transceiver_1/sclk_int_i_3_n_0                                |                1 |              1 |         1.00 |
+| ~clocking_wizard_1/clk_wiz_0/inst/clk_out1 |                                                                                           |                                                                   |                4 |             11 |         2.75 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | effects_pedal_1/chorus_0/U0/channel1/chorus_mem_driver_0/U0/adress_out[11]_i_1__0_n_0     |                                                                   |                2 |             12 |         6.00 |
+| ~clocking_wizard_1/clk_wiz_0/inst/clk_out1 | effects_pedal_1/chorus_0/U0/channel/chorus_mem_driver_0/U0/adress_out[11]_i_1_n_0         |                                                                   |                2 |             12 |         6.00 |
+|  i2s_transceiver_1/ws_OBUF_BUFG[0]         |                                                                                           | effects_pedal_1/chorus_0/U0/channel1/chorus_mem_driver_0/U0/clear |                4 |             13 |         3.25 |
+|  i2s_transceiver_1/ws_OBUF_BUFG[0]         | effects_pedal_1/chorus_0/U0/channel1/chorus_LFO_0/U0/sample_delay_buff                    |                                                                   |                4 |             13 |         3.25 |
+| ~i2s_transceiver_1/ws_OBUF_BUFG[0]         |                                                                                           | effects_pedal_1/chorus_0/U0/channel/chorus_mem_driver_0/U0/clear  |                4 |             13 |         3.25 |
+| ~i2s_transceiver_1/ws_OBUF_BUFG[0]         | effects_pedal_1/chorus_0/U0/channel/chorus_LFO_0/U0/sample_delay_buff                     |                                                                   |                4 |             13 |         3.25 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 |                                                                                           |                                                                   |                6 |             13 |         2.17 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | i2s_transceiver_1/l_data_tx_int[23]_i_1_n_0                                               | i2s_transceiver_1/sclk_int_i_3_n_0                                |                7 |             24 |         3.43 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | i2s_transceiver_1/l_data_rx_int_2                                                         | i2s_transceiver_1/sclk_int_i_3_n_0                                |                8 |             24 |         3.00 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | i2s_transceiver_1/r_data_rx_int_1                                                         | i2s_transceiver_1/sclk_int_i_3_n_0                                |                8 |             24 |         3.00 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | i2s_transceiver_1/r_data_tx_int[23]_i_1_n_0                                               | i2s_transceiver_1/sclk_int_i_3_n_0                                |                4 |             24 |         6.00 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | effects_pedal_1/chorus_0/U0/channel1/chorus_mem_driver_0/U0/data_write[23]_i_1__0_n_0     |                                                                   |                7 |             24 |         3.43 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | effects_pedal_1/chorus_0/U0/channel1/chorus_mem_driver_0/U0/data_read_buff[23]_i_1__0_n_0 |                                                                   |                9 |             24 |         2.67 |
+| ~clocking_wizard_1/clk_wiz_0/inst/clk_out1 | effects_pedal_1/chorus_0/U0/channel/chorus_mem_driver_0/U0/data_read_buff[23]_i_1_n_0     |                                                                   |               10 |             24 |         2.40 |
+| ~clocking_wizard_1/clk_wiz_0/inst/clk_out1 | effects_pedal_1/chorus_0/U0/channel/chorus_mem_driver_0/U0/data_write[23]_i_1_n_0         |                                                                   |                7 |             24 |         3.43 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 |                                                                                           | i2s_transceiver_1/sclk_int_i_3_n_0                                |                9 |             33 |         3.67 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | i2s_transceiver_1/p_1_in                                                                  | i2s_transceiver_1/sclk_int_i_3_n_0                                |                9 |             33 |         3.67 |
+|  clocking_wizard_1/clk_wiz_0/inst/clk_out1 | i2s_transceiver_1/l_data_rx[23]_i_1_n_0                                                   | i2s_transceiver_1/sclk_int_i_3_n_0                                |               17 |             48 |         2.82 |
+|  i2s_transceiver_1/ws_OBUF_BUFG[0]         |                                                                                           |                                                                   |               21 |             76 |         3.62 |
+| ~i2s_transceiver_1/ws_OBUF_BUFG[0]         |                                                                                           |                                                                   |               19 |             76 |         4.00 |
++--------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+--------------+
+
+

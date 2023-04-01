@@ -1,0 +1,48 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.822857",
+   "Default View_TopLeft":"-718,-19",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_mclk_in -pg 1 -lvl 0 -x -20 -y 250 -defaultsOSRD
+preplace port port-id_ws_in -pg 1 -lvl 0 -x -20 -y 470 -defaultsOSRD
+preplace port port-id_switch -pg 1 -lvl 0 -x -20 -y 360 -defaultsOSRD
+preplace portBus audio_in_L -pg 1 -lvl 0 -x -20 -y 490 -defaultsOSRD
+preplace portBus audio_in_R -pg 1 -lvl 0 -x -20 -y 230 -defaultsOSRD
+preplace portBus audio_out_l -pg 1 -lvl 3 -x 900 -y 110 -defaultsOSRD
+preplace portBus audio_out_r -pg 1 -lvl 3 -x 900 -y 130 -defaultsOSRD
+preplace portBus dry_wet_mix -pg 1 -lvl 0 -x -20 -y 510 -defaultsOSRD
+preplace portBus feedback_l -pg 1 -lvl 0 -x -20 -y 270 -defaultsOSRD
+preplace portBus feedback_r -pg 1 -lvl 0 -x -20 -y 190 -defaultsOSRD
+preplace portBus delay_ms_left -pg 1 -lvl 0 -x -20 -y 290 -defaultsOSRD
+preplace portBus delay_ms_right -pg 1 -lvl 0 -x -20 -y 920 -defaultsOSRD
+preplace inst Delay_mix_0 -pg 1 -lvl 1 -x 280 -y 130 -defaultsOSRD
+preplace inst delay_channel_left -pg 1 -lvl 1 -x 280 -y 310 -defaultsOSRD
+preplace inst delay_channel_right -pg 1 -lvl 1 -x 280 -y 940 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 280 -y 700 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 1 -x 280 -y 550 -defaultsOSRD
+preplace inst effect_on_off_0 -pg 1 -lvl 2 -x 690 -y 120 -defaultsOSRD
+preplace netloc Delay_mix_0_audio_out_l 1 1 1 N 120
+preplace netloc Delay_mix_0_audio_out_r 1 1 1 N 140
+preplace netloc audio_in_0_0_1 1 0 2 40J 0 490
+preplace netloc audio_in_L_1 1 0 2 10J -10 500
+preplace netloc delay_channel_1_1_delay_0 1 0 2 70 20 470
+preplace netloc delay_channel_left_delay_0 1 0 2 60 10 450
+preplace netloc effect_on_off_0_audio_out_l 1 2 1 N 110
+preplace netloc effect_on_off_0_audio_out_r 1 2 1 N 130
+preplace netloc mclk_in_1 1 0 1 0 250n
+preplace netloc mix_0_0_1 1 0 1 30J 190n
+preplace netloc mix_0_0_2 1 0 1 NJ 270
+preplace netloc mix_0_1 1 0 1 50J 170n
+preplace netloc switch_1 1 0 2 20J 30 480
+preplace netloc util_vector_logic_0_Res 1 0 2 60 480 460J
+preplace netloc util_vector_logic_1_Res 1 0 2 70 490 450J
+preplace netloc ws_in_1 1 0 1 20 470n
+preplace netloc delay_ms_left_1 1 0 1 N 290
+preplace netloc delay_ms_right_1 1 0 1 N 920
+levelinfo -pg 1 -20 280 690 900
+pagesize -pg 1 -db -bbox -sgen -210 -20 1060 1050
+"
+}
+0

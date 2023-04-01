@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="effects_pedal_effect_on_off_0_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/effects_pedal_effect_on_off_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="effects_pedal_effect_on_off_0_1_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/effects_pedal_effect_on_off_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="effects_pedal_chorus_settings_0_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/effects_pedal_chorus_settings_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="effects_pedal_delay_settings_0_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/effects_pedal_delay_settings_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="delay_channel_1_inst_3_fir_compiler_1_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/delay_channel_1_inst_3_fir_compiler_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="delay_channel_1_inst_3_delay_mem_driver_0_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/delay_channel_1_inst_3_delay_mem_driver_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="delay_channel_1_inst_2_delay_mem_driver_0_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/delay_channel_1_inst_2_delay_mem_driver_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="delay_channel_1_inst_2_fir_compiler_1_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/delay_channel_1_inst_2_fir_compiler_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="delay_channel_1_inst_3_fir_compiler_1_0_synth_1"/>
+	</Run>
+	<Run Id="delay_channel_1_inst_2_fir_compiler_0_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/delay_channel_1_inst_2_fir_compiler_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="delay_channel_1_inst_3_fir_compiler_0_0_synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/delay_channel_1_inst_3_fir_compiler_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="delay_channel_1_inst_2_fir_compiler_0_0_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="effects_pedal_effect_on_off_0_0_synth_1"/>
+		<Parent Id="effects_pedal_effect_on_off_0_1_synth_1"/>
+		<Parent Id="effects_pedal_chorus_settings_0_0_synth_1"/>
+		<Parent Id="effects_pedal_delay_settings_0_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_3_fir_compiler_1_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_3_delay_mem_driver_0_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_2_delay_mem_driver_0_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_2_fir_compiler_1_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_2_fir_compiler_0_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_3_fir_compiler_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="effects_pedal_effect_on_off_0_0_synth_1"/>
+		<Parent Id="effects_pedal_effect_on_off_0_1_synth_1"/>
+		<Parent Id="effects_pedal_chorus_settings_0_0_synth_1"/>
+		<Parent Id="effects_pedal_delay_settings_0_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_3_fir_compiler_1_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_3_delay_mem_driver_0_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_2_delay_mem_driver_0_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_2_fir_compiler_1_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_2_fir_compiler_0_0_synth_1"/>
+		<Parent Id="delay_channel_1_inst_3_fir_compiler_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

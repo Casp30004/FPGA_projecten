@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_fifo_generator_0_0/sim/Fifo_fifo_generator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fifo_fifo_generator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_fifo_generator_0_1/sim/Fifo_fifo_generator_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fifo_fifo_generator_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_xlconstant_0_0/sim/Fifo_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fifo_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.ip_user_files/bd/Fifo/ip/Fifo_reset_inv_0_0/sim/Fifo_reset_inv_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fifo_reset_inv_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

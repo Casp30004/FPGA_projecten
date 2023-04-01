@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Fifo": {
+			"proto_instances": {
+			}
+		}
+	}
+}

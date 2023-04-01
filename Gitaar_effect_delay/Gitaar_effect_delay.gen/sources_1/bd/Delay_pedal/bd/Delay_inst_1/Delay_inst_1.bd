@@ -1,0 +1,591 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF550C9DF498C914A",
+      "design_src": "c:/gitaar_effect/Gitaar_effect_delay/Gitaar_effect_delay.gen/sources_1/bd/Delay_pedal/bd/Delay_inst_0/Delay_inst_0.bd",
+      "device": "xc7a100tcsg324-1",
+      "name": "Delay_inst_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true",
+      "variant": "true"
+    },
+    "design_tree": {
+      "c_addsub_0": "",
+      "Audio_to_axis_0": "",
+      "fir_compiler_1": "",
+      "fir_compiler_0": "",
+      "fir_resizer_0": "",
+      "fir_resizer_1": "",
+      "selfmade_delay_wrapp_0": "",
+      "feedback_0": ""
+    },
+    "ports": {
+      "ws_in": {
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "strong"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "strong"
+          }
+        }
+      },
+      "audio_out": {
+        "direction": "O",
+        "left": "23",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value FALSE}}}} DATA_WIDTH 24}",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "audio_in": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "mclk_in": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Delay_mclk_in1",
+            "value_src": "strong"
+          },
+          "FREQ_HZ": {
+            "value": "11289000",
+            "value_src": "strong"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "strong"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "strong"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "strong"
+          }
+        }
+      },
+      "delay_in_samples": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "mix": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "c_addsub_0": {
+        "vlnv": "xilinx.com:ip:c_addsub:12.0",
+        "xci_name": "Delay_inst_1_c_addsub_0_0",
+        "xci_path": "ip\\Delay_inst_1_c_addsub_0_0\\Delay_inst_1_c_addsub_0_0.xci",
+        "inst_hier_path": "c_addsub_0",
+        "parameters": {
+          "A_Type": {
+            "value": "Unsigned"
+          },
+          "A_Width": {
+            "value": "24"
+          },
+          "B_Constant": {
+            "value": "false"
+          },
+          "B_Type": {
+            "value": "Unsigned"
+          },
+          "B_Value": {
+            "value": "000000000000000000000000"
+          },
+          "B_Width": {
+            "value": "24"
+          },
+          "CE": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "0"
+          },
+          "Out_Width": {
+            "value": "24"
+          }
+        }
+      },
+      "Audio_to_axis_0": {
+        "vlnv": "xilinx.com:module_ref:Audio_to_axis:1.0",
+        "xci_name": "Delay_inst_1_Audio_to_axis_0_0",
+        "xci_path": "ip\\Delay_inst_1_Audio_to_axis_0_0\\Delay_inst_1_Audio_to_axis_0_0.xci",
+        "inst_hier_path": "Audio_to_axis_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Audio_to_axis",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis_data": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "3",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "11289000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "Delay_mclk_in1",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_data_tdata",
+                "direction": "O",
+                "left": "23",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_data_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "m_axis_data_tready",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "audio_in": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "ws_in": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "default_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "m_axis_data",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "11289000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "Delay_mclk_in1",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "fir_compiler_1": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "xci_name": "Delay_inst_1_fir_compiler_1_0",
+        "xci_path": "ip\\Delay_inst_1_fir_compiler_1_0\\Delay_inst_1_fir_compiler_1_0.xci",
+        "inst_hier_path": "fir_compiler_1",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "11.29"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../Gitaar_effect_delay.srcs/highpass.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Inferred"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Truncate_LSBs"
+          },
+          "Output_Width": {
+            "value": "26"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "Sample_Frequency": {
+            "value": "0.044"
+          }
+        }
+      },
+      "fir_compiler_0": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "xci_name": "Delay_inst_1_fir_compiler_0_0",
+        "xci_path": "ip\\Delay_inst_1_fir_compiler_0_0\\Delay_inst_1_fir_compiler_0_0.xci",
+        "inst_hier_path": "fir_compiler_0",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "11.29"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../Gitaar_effect_delay.srcs/lowpass.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Inferred"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "Data_Width": {
+            "value": "24"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Truncate_LSBs"
+          },
+          "Output_Width": {
+            "value": "26"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "Sample_Frequency": {
+            "value": "0.044"
+          }
+        }
+      },
+      "fir_resizer_0": {
+        "vlnv": "xilinx.com:module_ref:fir_resizer:1.0",
+        "xci_name": "Delay_inst_1_fir_resizer_0_0",
+        "xci_path": "ip\\Delay_inst_1_fir_resizer_0_0\\Delay_inst_1_fir_resizer_0_0.xci",
+        "inst_hier_path": "fir_resizer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fir_resizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "input_audio": {
+            "direction": "I",
+            "left": "25",
+            "right": "0"
+          },
+          "output_audio": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "fir_resizer_1": {
+        "vlnv": "xilinx.com:module_ref:fir_resizer:1.0",
+        "xci_name": "Delay_inst_1_fir_resizer_1_0",
+        "xci_path": "ip\\Delay_inst_1_fir_resizer_1_0\\Delay_inst_1_fir_resizer_1_0.xci",
+        "inst_hier_path": "fir_resizer_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fir_resizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "input_audio": {
+            "direction": "I",
+            "left": "25",
+            "right": "0"
+          },
+          "output_audio": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "selfmade_delay_wrapp_0": {
+        "vlnv": "xilinx.com:module_ref:selfmade_delay_wrapper:1.0",
+        "xci_name": "Delay_inst_1_selfmade_delay_wrapp_0_0",
+        "xci_path": "ip\\Delay_inst_1_selfmade_delay_wrapp_0_0\\Delay_inst_1_selfmade_delay_wrapp_0_0.xci",
+        "inst_hier_path": "selfmade_delay_wrapp_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "selfmade_delay_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "audio_in_0": {
+            "direction": "I",
+            "left": "23",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value FALSE}}}} DATA_WIDTH 24}",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk_in_0": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "11289000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "Delay_mclk_in1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "delay_0": {
+            "direction": "O",
+            "left": "23",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value FALSE}}}} DATA_WIDTH 24}",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "delay_sample_0": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ws_in_0": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "default_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "feedback_0": {
+        "vlnv": "xilinx.com:module_ref:feedback:1.0",
+        "xci_name": "Delay_inst_1_feedback_0_0",
+        "xci_path": "ip\\Delay_inst_1_feedback_0_0\\Delay_inst_1_feedback_0_0.xci",
+        "inst_hier_path": "feedback_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "feedback",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "audio_in": {
+            "direction": "I",
+            "left": "23",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value FALSE}}}} DATA_WIDTH 24}",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "audio_out": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "mix": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "Audio_to_axis_0_m_axis_data": {
+        "interface_ports": [
+          "fir_compiler_0/S_AXIS_DATA",
+          "Audio_to_axis_0/m_axis_data"
+        ]
+      }
+    },
+    "nets": {
+      "audio_in_l_0_1": {
+        "ports": [
+          "audio_in",
+          "Audio_to_axis_0/audio_in"
+        ]
+      },
+      "c_addsub_0_S": {
+        "ports": [
+          "c_addsub_0/S",
+          "selfmade_delay_wrapp_0/audio_in_0"
+        ]
+      },
+      "clk_in_0_1": {
+        "ports": [
+          "mclk_in",
+          "Audio_to_axis_0/aclk",
+          "fir_compiler_1/aclk",
+          "fir_compiler_0/aclk",
+          "selfmade_delay_wrapp_0/clk_in_0"
+        ]
+      },
+      "delay_sample_0_0_1": {
+        "ports": [
+          "delay_in_samples",
+          "selfmade_delay_wrapp_0/delay_sample_0"
+        ]
+      },
+      "feedback_0_audio_out": {
+        "ports": [
+          "feedback_0/audio_out",
+          "c_addsub_0/A"
+        ]
+      },
+      "fir_compiler_0_m_axis_data_tdata": {
+        "ports": [
+          "fir_compiler_0/m_axis_data_tdata",
+          "fir_resizer_0/input_audio"
+        ]
+      },
+      "fir_compiler_0_m_axis_data_tvalid": {
+        "ports": [
+          "fir_compiler_0/m_axis_data_tvalid",
+          "fir_compiler_1/s_axis_data_tvalid"
+        ]
+      },
+      "fir_compiler_1_m_axis_data_tdata": {
+        "ports": [
+          "fir_compiler_1/m_axis_data_tdata",
+          "fir_resizer_1/input_audio"
+        ]
+      },
+      "fir_resizer_0_output": {
+        "ports": [
+          "fir_resizer_0/output_audio",
+          "fir_compiler_1/s_axis_data_tdata"
+        ]
+      },
+      "fir_resizer_1_output": {
+        "ports": [
+          "fir_resizer_1/output_audio",
+          "c_addsub_0/B"
+        ]
+      },
+      "mix_0_1": {
+        "ports": [
+          "mix",
+          "feedback_0/mix"
+        ]
+      },
+      "selfmade_delay_1_delay_0": {
+        "ports": [
+          "selfmade_delay_wrapp_0/delay_0",
+          "audio_out",
+          "feedback_0/audio_in"
+        ]
+      },
+      "ws_in_0_1": {
+        "ports": [
+          "ws_in",
+          "Audio_to_axis_0/ws_in",
+          "selfmade_delay_wrapp_0/ws_in_0"
+        ]
+      }
+    }
+  }
+}

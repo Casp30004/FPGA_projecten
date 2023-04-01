@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 17 19:16:10 2023" VIVADOVERSION="2022.1">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.2" DEVICE="7a100t" NAME="effects_pedal" PACKAGE="csg324" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="11289000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_pedal_0" PORT="ACLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="44000" DIR="I" NAME="ws_in" SIGIS="clk" SIGNAME="External_Ports_ws_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_pedal_0" PORT="ws_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="23" NAME="audio_in_left" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_audio_in_left">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_pedal_0" PORT="s_axis_tdata_audio_l"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="23" NAME="audio_in_right" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_audio_in_right">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_pedal_0" PORT="s_axis_tdata_audio_r"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="23" NAME="audio_out_l" RIGHT="0" SIGIS="undef" SIGNAME="chorus_pedal_0_m_axis_audio_l_tdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_pedal_0" PORT="m_axis_audio_l_tdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="23" NAME="audio_out_r" RIGHT="0" SIGIS="undef" SIGNAME="chorus_pedal_0_m_axis_audio_r_tdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_pedal_0" PORT="m_axis_audio_r_tdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="switch_chorus" SIGIS="undef" SIGNAME="External_Ports_switch_chorus">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="chorus_pedal_0" PORT="switch"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="4" FULLNAME="/chorus_pedal_0" HWVERSION="1.0" INSTANCE="chorus_pedal_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="chorus_pedal" VLNV="xilinx.com:user:chorus_pedal:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="max_delay_ms" VALUE="30"/>
+        <PARAMETER NAME="chorus_depth" VALUE="5"/>
+        <PARAMETER NAME="feedback_chorus" VALUE="0"/>
+        <PARAMETER NAME="chorus_speed" VALUE="100"/>
+        <PARAMETER NAME="chorus_mix" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="effects_pedal_chorus_pedal_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="11289000" DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="External_Ports_aclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_audio_l_tdata" RIGHT="0" SIGIS="undef" SIGNAME="chorus_pedal_0_m_axis_audio_l_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_out_l"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_audio_l_tready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_axis_audio_l_tvalid" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_audio_r_tdata" RIGHT="0" SIGIS="undef" SIGNAME="chorus_pedal_0_m_axis_audio_r_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_out_r"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_audio_r_tready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_axis_audio_r_tvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_axis_tdata_audio_l" SIGIS="undef" SIGNAME="External_Ports_audio_in_left">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_in_left"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tdata_audio_r" SIGIS="undef" SIGNAME="External_Ports_audio_in_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_in_right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="switch" SIGIS="undef" SIGNAME="External_Ports_switch_chorus">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="switch_chorus"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ws_in" SIGIS="undef" SIGNAME="External_Ports_ws_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ws_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="m_axis_audio_r" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_audio_r_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_audio_r_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_audio_r_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="m_axis_audio_l" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_audio_l_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_audio_l_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_audio_l_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="s_axis_audio_in_l" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="NUM_READ_OUTSTANDING"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata_audio_l"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="s_axis_audio_in_r" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata_audio_r"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
